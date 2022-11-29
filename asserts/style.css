@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #C0C0C0;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+header {
+    background-color: #008000;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+header h1 {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+}
+#buscador {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.primeraParte {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.primeraParte input {
+    padding: 1px;
+}
+/* VISTA DE ALTA DE NUEVA RUTA */
+#altaRuta {
+    color: #008000;
+    text-decoration: underline;
+    text-align: center;
+}
+#formNuevaAlta {
+    margin: 0 auto;
+    width: 800px;
+}
+#formNuevaAlta div {
+    margin: 10px;
+}
+#formNuevaAlta div label {
+    display: inline-block;
+    width: 100px;
+    background-color: #008000;
+    text-align: center;
+    color: white;
+}
+#buttonEnviar {
+    text-align: center;
+}
+input[name="titulo"] {
+    width: 50%
+}
+input[name="descripcion"] {
+    width: calc(100% - 110px);
+}
+textarea[name="notas"] {
+    width: 50%
+}
