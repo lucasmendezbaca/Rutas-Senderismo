@@ -8,6 +8,12 @@ class RutaController {
         require_once 'views/Listado.php';
     }
 
+    public function edit() {
+        $rutaManager = new RutaManagerModel();
+        $ruta = $rutaManager->getById($_GET['id']);
+        require_once 'views/Editar.php';
+    }
+
 }
 
 ?>
