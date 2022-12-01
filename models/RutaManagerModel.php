@@ -30,8 +30,8 @@ class RutaManagerModel {
     }
 
     public function getById($id) {
-        $sql = "SELECT * FROM rutas WHERE id = $id";
-        $result = $this->conexion->consulta($sql);
+        $sql = "SELECT * FROM rutas WHERE id = (:id)";
+        $result = $this->conexion->consulta($sql, array(":id" => $id));
         $row = $result->fetch(PDO::FETCH_ASSOC);
         $ruta = new RutaModel();
         $ruta->setId($row['id']);
