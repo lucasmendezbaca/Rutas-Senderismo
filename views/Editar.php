@@ -1,6 +1,6 @@
 <h2>Editar Ruta</h2>
 <?php
-echo "<form action='' id='formNuevaAlta'>";
+echo "<form action='index.php?controller=ruta&action=update' id='formNuevaAlta' method='post'>";
     echo "<div>";
         echo "<label for='titulo'>Título</label>";
         echo "<input type='text' name='titulo' id='titulo' value='" . $ruta->getTitulo() . "'>";
@@ -30,6 +30,7 @@ echo "<form action='' id='formNuevaAlta'>";
         echo "<textarea name='notas' cols='30' rows='10'>" . $ruta->getNotas() . "</textarea>";
     echo "</div>";
     echo "<div id='buttonEnviar'>";
+        echo "<input type='hidden' name='id' value='" . $ruta->getId() . "'>";
         echo "<input type='submit' value='Guardar'>";
     echo "</div>";
 echo "</form>";

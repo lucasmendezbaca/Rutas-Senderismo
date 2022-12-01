@@ -1,5 +1,5 @@
 <h2 id='altaRuta'>ALTA DE NUEVA RUTA</h2>
-<form action="" id='formNuevaAlta'>
+<form action="index.php?controller=ruta&action=insert" id='formNuevaAlta' method='post'>
     <div>
         <label for="titulo">Título</label>
         <input type="text" name="titulo" id="titulo">

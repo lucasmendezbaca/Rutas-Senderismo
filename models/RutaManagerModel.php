@@ -44,6 +44,21 @@ class RutaManagerModel {
         return $ruta;
     }
 
+    public function update($ruta) {
+        $sql = "UPDATE rutas SET titulo = (:titulo), descripcion = (:descripcion), desnivel = (:desnivel), distancia = (:distancia), notas = (:notas), dificultad = (:dificultad) WHERE id = (:id)";
+        $this->conexion->consulta($sql, array(":titulo" => $ruta->getTitulo(), ":descripcion" => $ruta->getDescripcion(), ":desnivel" => $ruta->getDesnivel(), ":distancia" => $ruta->getDistancia(), ":notas" => $ruta->getNotas(), ":dificultad" => $ruta->getDificultad(), ":id" => $ruta->getId()));
+    }
+
+    public function delete($id) {
+        $sql = "DELETE FROM rutas WHERE id = (:id)";
+        $this->conexion->consulta($sql, array(":id" => $id));
+    }
+
+    public function insert($ruta) {
+        $sql = "INSERT INTO rutas (titulo, descripcion, desnivel, distancia, notas, dificultad) VALUES (:titulo, :descripcion, :desnivel, :distancia, :notas, :dificultad)";
+        $this->conexion->consulta($sql, array(":titulo" => $ruta->getTitulo(), ":descripcion" => $ruta->getDescripcion(), ":desnivel" => $ruta->getDesnivel(), ":distancia" => $ruta->getDistancia(), ":notas" => $ruta->getNotas(), ":dificultad" => $ruta->getDificultad()));
+    }
+
 }
 
 ?>

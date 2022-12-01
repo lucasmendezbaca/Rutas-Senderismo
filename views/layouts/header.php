@@ -22,7 +22,7 @@
                 </select>
             </div>
             <div>
-                <button><a href="">Nueva ruta</a></button>
+                <button><a href="index.php?controller=ruta&action=new">Nueva ruta</a></button>
             </div>
         </div>
         <div class='primeraParte'>
