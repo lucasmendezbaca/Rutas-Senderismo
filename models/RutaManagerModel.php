@@ -60,7 +60,7 @@ class RutaManagerModel {
     }
 
     public function searchByTittle($titulo) {
-        $sql = "SELECT * FROM rutas WHERE titulo LIKE (:titulo)";
+        $sql = "SELECT * FROM rutas WHERE LOWER(titulo) LIKE LOWER(:titulo)";
         $result = $this->conexion->consulta($sql, array(":titulo" => "%$titulo%"));
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $ruta = new RutaModel();
