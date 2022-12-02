@@ -8,14 +8,14 @@ class RutaModel {
     private $notas;
     private $dificultad;
 
-    public function __construct() {
-        $this->id = 0;
-        $this->titulo = "";
-        $this->descripcion = "";
-        $this->desnivel = 0;
-        $this->distancia = 0;
-        $this->notas = "";
-        $this->dificultad = 0;
+    public function __construct($id, $titulo, $descripcion, $desnivel, $distancia, $notas, $dificultad) {
+        $this->id = $id;
+        $this->titulo = $titulo;
+        $this->descripcion = $descripcion;
+        $this->desnivel = $desnivel;
+        $this->distancia = $distancia;
+        $this->notas = $notas;
+        $this->dificultad = $dificultad;
     }
 
     public function getId() {
@@ -73,7 +73,6 @@ class RutaModel {
     public function setDificultad($dificultad) {
         $this->dificultad = $dificultad;
     }
-
 
 }
 

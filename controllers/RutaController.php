@@ -39,13 +39,7 @@ class RutaController {
 
     public function insert() {
         $rutaManager = new RutaManagerModel();
-        $ruta = new RutaModel();
-        $ruta->setTitulo($_POST['titulo']);
-        $ruta->setDescripcion($_POST['descripcion']);
-        $ruta->setDesnivel($_POST['desnivel']);
-        $ruta->setDistancia($_POST['distancia']);
-        $ruta->setNotas($_POST['notas']);
-        $ruta->setDificultad($_POST['dificultad']);
+        $ruta = new RutaModel(null, $_POST['titulo'], $_POST['descripcion'], $_POST['desnivel'], $_POST['distancia'], $_POST['notas'], $_POST['dificultad']);
         $rutaManager->insert($ruta);
         header('Location: index.php');
     }
