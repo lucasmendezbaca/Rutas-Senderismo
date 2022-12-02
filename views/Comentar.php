@@ -41,23 +41,25 @@ echo '<table class="tabla_comentarios">
             echo "<td>" . $comentario->getTexto() . "</td>";
         echo "</tr>";
     }
-    // echo "<tr>";
-    //     echo "<td>";
-    //     echo "<form action='index.php?controller=comentario&action=insert' method='post'>";
-    //         // echo "<td>";
-    //                 echo "<input type='hidden' name='id_ruta' value='" . $ruta->getId() . "' />";
-    //                 echo "<input type='text' name='nombre' />";
-    //         // echo "</td>";
-    //         // echo "<td>";
-    //                 echo "<span>" . date("Y-m-d") . "</span>";
-    //         // echo "</td>";
-    //         // echo "<td>";
-    //                 echo "<input type='text' name='texto' />";
-    //         // echo "</td>";
-    //         echo "<input type='submit' value='Comentar' />";
-    //     echo "</form>";
-    //     echo "</td>";
-    // echo "</tr>";
+    echo "<tr>";
+        echo "<form action='index.php?controller=comentario&action=insert' method='post'>";
+            echo "<td class='tdComentar'>";
+                    echo "<input type='hidden' name='id_ruta' value='" . $ruta->getId() . "' />";
+                    echo "<input type='text' name='nombre' />";
+            echo "</td>";
+            echo "<td class='tdComentar'>";
+                    echo "<span>" . date("Y-m-d") . "</span>";
+            echo "</td>";
+            echo "<td class='tdComentar'>";
+                    echo "<input type='text' name='texto' />";
+            echo "</td>";
+            echo "<tr>";
+                echo "<td colspan='3' id='submitComentar'>";
+                    echo "<input type='submit' value='Comentar'/>";
+                echo "</td>";
+            echo "</tr>";
+        echo "</form>";
+    echo "</tr>";
 echo "</table>";
 
 ?>

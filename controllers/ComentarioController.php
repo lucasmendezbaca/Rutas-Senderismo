@@ -12,6 +12,15 @@ class ComentarioController {
         $comentarios = $comentarioManager->getByRuta($id_ruta);
         require_once 'views/Comentar.php';
     }
+
+    public function insert() {
+        $id_ruta = $_POST['id_ruta'];
+        $nombre = $_POST['nombre'];
+        $texto = $_POST['texto'];
+        $comentarioManager = new ComentarioManagerModel();
+        $comentarioManager->insert($id_ruta, $nombre, $texto);
+        header("Location: index.php?controller=comentario&action=comment&id=$id_ruta");
+    }
 }
 
 ?>

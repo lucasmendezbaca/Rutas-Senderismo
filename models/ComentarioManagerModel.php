@@ -22,6 +22,11 @@ class ComentarioManagerModel {
 
         return $this->comentarios;
     }
+
+    public function insert($id_ruta, $nombre, $texto) {
+        $consulta = "INSERT INTO rutas_comentarios (id_ruta, nombre, texto, fecha) VALUES (:id_ruta, :nombre, :texto, :fecha)";
+        $this->conexion->consulta($consulta, array(":id_ruta" => $id_ruta, ":nombre" => $nombre, ":texto" => $texto, ":fecha" => date("Y-m-d")));
+    }
 }
 
 ?>

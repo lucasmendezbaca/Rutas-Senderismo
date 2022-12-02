@@ -96,3 +96,9 @@ textarea[name="notas"] {
 .tabla_comentarios {
     width: 100%;
 }
+#submitComentar {
+    text-align: right;
+}
+.tdComentar input{
+    width: 99%;
+}
