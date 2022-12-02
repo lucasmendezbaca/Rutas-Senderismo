@@ -59,6 +59,42 @@ class RutaManagerModel {
         $this->conexion->consulta($sql, array(":titulo" => $ruta->getTitulo(), ":descripcion" => $ruta->getDescripcion(), ":desnivel" => $ruta->getDesnivel(), ":distancia" => $ruta->getDistancia(), ":notas" => $ruta->getNotas(), ":dificultad" => $ruta->getDificultad()));
     }
 
+    public function searchByTittle($titulo) {
+        $sql = "SELECT * FROM rutas WHERE titulo LIKE (:titulo)";
+        $result = $this->conexion->consulta($sql, array(":titulo" => "%$titulo%"));
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $ruta = new RutaModel();
+            $ruta->setId($row['id']);
+            $ruta->setTitulo($row['titulo']);
+            $ruta->setDescripcion($row['descripcion']);
+            $ruta->setDesnivel($row['desnivel']);
+            $ruta->setDistancia($row['distancia']);
+            $ruta->setNotas($row['notas']);
+            $ruta->setDificultad($row['dificultad']);
+
+            $this->rutas[] = $ruta;
+        }
+        return $this->rutas;
+    }
+
+    public function searchByDescription($descripcion) {
+        $sql = "SELECT * FROM rutas WHERE descripcion LIKE (:descripcion)";
+        $result = $this->conexion->consulta($sql, array(":descripcion" => "%$descripcion%"));
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $ruta = new RutaModel();
+            $ruta->setId($row['id']);
+            $ruta->setTitulo($row['titulo']);
+            $ruta->setDescripcion($row['descripcion']);
+            $ruta->setDesnivel($row['desnivel']);
+            $ruta->setDistancia($row['distancia']);
+            $ruta->setNotas($row['notas']);
+            $ruta->setDificultad($row['dificultad']);
+
+            $this->rutas[] = $ruta;
+        }
+        return $this->rutas;
+    }
+
 }
 
 ?>

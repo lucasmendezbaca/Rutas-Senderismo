@@ -50,6 +50,26 @@ class RutaController {
         header('Location: index.php');
     }
 
+    public function searchByTitle() {
+        $rutaManager = new RutaManagerModel();
+        $rutas = $rutaManager->searchByTittle($_POST['campo']);
+        require_once 'views/Listado.php';
+    }
+
+    public function searchByDescription() {
+        $rutaManager = new RutaManagerModel();
+        $rutas = $rutaManager->searchByDescription($_POST['campo']);
+        require_once 'views/Listado.php';
+    }
+
+    public function selectSearch() {
+        if ($_POST['titulo'] == 'Título') {
+            $this->searchByTitle();
+        } else {
+            $this->searchByDescription();
+        }
+    }
+
 }
 
 ?>

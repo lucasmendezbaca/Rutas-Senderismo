@@ -31,6 +31,9 @@ header h1 {
 #buscador {
     margin: 10px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 h2 {
     margin-top: 20px;
@@ -39,13 +42,13 @@ h2 {
     text-decoration: underline;
     text-align: center;
 }
-.primeraParte {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
 .primeraParte input {
     padding: 1px;
+    margin-top: 5px;
+}
+.segundaParte button {
+    padding: 1px;
+    margin-bottom: 5px;
 }
 /* VISTA DE ALTA DE NUEVA RUTA */
 .page_main_content {
