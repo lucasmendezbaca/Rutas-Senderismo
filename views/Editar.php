@@ -1,6 +1,6 @@
 <h2>Editar Ruta</h2>
 <?php
-echo "<form action='index.php?controller=ruta&action=update' id='formNuevaAlta' method='post'>";
+echo "<form action='index.php?controller=ruta&action=update' id='formNuevaAlta' class='page_main_content' method='post'>";
     echo "<div>";
         echo "<label for='titulo'>Título</label>";
         echo "<input type='text' name='titulo' id='titulo' value='" . $ruta->getTitulo() . "'>";

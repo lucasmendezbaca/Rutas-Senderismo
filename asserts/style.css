@@ -5,16 +5,23 @@
 body {
     background-color: #C0C0C0;
 }
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
 a {
     text-decoration: none;
     color: #000000;
 }
 header {
+    box-sizing: border-box;
     background-color: #008000;
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0px 40px;
+    padding-right: 140px;
 }
 header h1 {
     display: flex;
@@ -28,6 +35,9 @@ header h1 {
 h2 {
     margin-top: 20px;
     margin-bottom: 30px;
+    color: #008000;
+    text-decoration: underline;
+    text-align: center;
 }
 .primeraParte {
     display: flex;
@@ -38,19 +48,15 @@ h2 {
     padding: 1px;
 }
 /* VISTA DE ALTA DE NUEVA RUTA */
-#altaRuta {
-    color: #008000;
-    text-decoration: underline;
-    text-align: center;
-}
-#formNuevaAlta {
+.page_main_content {
     margin: 0 auto;
     width: 800px;
 }
 #formNuevaAlta div {
     margin: 10px;
 }
-#formNuevaAlta div label {
+#formNuevaAlta div label,
+.page_main_content label {
     display: inline-block;
     width: 100px;
     background-color: #008000;
@@ -68,4 +74,22 @@ input[name="descripcion"] {
 }
 textarea[name="notas"] {
     width: 50%
+}
+/* Tabla del listado */
+.encabezado_tabla {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+}
+/* Comentarios */
+.page_main_content div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.page_main_content div label {
+    min-width: 100px;
+}
+.tabla_comentarios {
+    width: 100%;
 }
